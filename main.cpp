@@ -3,8 +3,8 @@
 #include<iomanip>
 #include<fstream>
 #include<iostream>
-#include"KMP.cpp" //KMP()
-#include"Fibo.cpp" //class Fibo28
+#include"KMP.h" //KMP()
+#include"Fibo.h" //class Fibo28
 
 unsigned long long int occur_counter(int n, std::string_view p);
 
