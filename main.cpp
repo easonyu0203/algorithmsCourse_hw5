@@ -13,11 +13,11 @@ Fibo28 fibos;
 int main(){
 
 	int caseCnt = 1;
-	while(1){
-		//input
-		std::string p;
-		int n;
-		std::cin >> n >> p;
+	//input
+	std::string p;
+	int n;
+	
+	while(std::cin >> n >> p){
 
 		unsigned long long int count = occur_counter(n, p);
 
