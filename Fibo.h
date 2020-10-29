@@ -1,4 +1,5 @@
 #include<string>
+#include<string_view>
 #include <iostream>
 
 #define DUM 1 //Don't change this
@@ -9,13 +10,14 @@
 // get string Fibo 0-28 in constant time
 class Fibo28{
 	private:
-	std::string _fibo28;
+	std::string_view _fibo28;
 	unsigned long long int fibo_len[93];
 	public:
-	std::string n(int n){
+	std::string_view n(int n){
 		if(n == 0) return "0";
 		if(n == 1) return "1";
-		return _fibo28.substr(0, fibo_len[n]);
+		return std::string_view(_fibo28.begin(), fibo_len[n]);
+		// return _fibo28.substr(0, fibo_len[n]);
 	}
 	unsigned long long int length(int n){ return fibo_len[n]; }
 	Fibo28();

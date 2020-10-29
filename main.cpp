@@ -1,12 +1,13 @@
 
 #include<string>
+#include<string_view>
 #include<iomanip>
 #include<fstream>
 #include<iostream>
 #include"KMP.h" //KMP()
 #include"Fibo.h" //class Fibo28
 
-unsigned long long int occur_counter(int n, std::string& p);
+unsigned long long int occur_counter(int n, std::string_view p);
 
 Fibo28 fibos;
 
@@ -19,7 +20,7 @@ int main(){
 	
 	while(std::cin >> n >> p){
 
-		unsigned long long int count = occur_counter(n, p);
+		unsigned long long int count = occur_counter(n, p.c_str());
 
 		std::cout << "Case " << caseCnt << ": " << count << std::endl;
 
@@ -32,7 +33,7 @@ int main(){
 	return 0;
 }
 
-unsigned long long int occur_counter(int n, std::string& p){
+unsigned long long int occur_counter(int n, std::string_view p){
 
 	// find m
 	int m;
@@ -66,7 +67,10 @@ unsigned long long int occur_counter(int n, std::string& p){
 	occurences[m-1] = KMP(fibos.n(m-1), p);
 	occurences[m-2] = KMP(fibos.n(m-2), p);
 	occurences[m-3] = KMP(fibos.n(m-3), p);
-	unsigned long long int _w = occurences[m-1] + KMP(fibos.n(m-3) + fibos.n(m-2), p) - 2*(occurences[m-2] + occurences[m-3]);
+	std::string tmp; tmp.reserve(fibos.length(m-1));
+	tmp += fibos.n(m-3);
+	tmp += fibos.n(m-2);
+	unsigned long long int _w = occurences[m-1] + KMP(tmp, p) - 2*(occurences[m-2] + occurences[m-3]);
 
 	// induction step
 	for(int i = m; i <= n; i++){
