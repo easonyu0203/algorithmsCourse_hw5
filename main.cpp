@@ -1,4 +1,4 @@
-#include<string_view>
+
 #include<string>
 #include<iomanip>
 #include<fstream>
@@ -6,7 +6,7 @@
 #include"KMP.h" //KMP()
 #include"Fibo.h" //class Fibo28
 
-unsigned long long int occur_counter(int n, std::string_view p);
+unsigned long long int occur_counter(int n, std::string p);
 
 Fibo28 fibos;
 
@@ -32,7 +32,7 @@ int main(){
 	return 0;
 }
 
-unsigned long long int occur_counter(int n, std::string_view p){
+unsigned long long int occur_counter(int n, std::string p){
 
 	// find m
 	int m;

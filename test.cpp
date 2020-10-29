@@ -6,6 +6,6 @@
 
 int main(){
 
-	std::cout << "hello\n";
+	std::string_view a("asdf");
 	return 0;
 }

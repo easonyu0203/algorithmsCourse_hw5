@@ -8,7 +8,7 @@
 
 // KMP pattern search function
 // output the number of occurence
-int KMP(std::string_view txt, std::string_view pat){
+int KMP(std::string txt, std::string pat){
 
 	// set up LPS array
 	int lps[pat.length()];
