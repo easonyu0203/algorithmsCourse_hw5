@@ -3,6 +3,7 @@
 
 #define DUM 1 //Don't change it
 #define FIBO_MAIN_DEBUG 0
+#define MEM_LIM 0
 
 // defind Class Fibo28
 // get string Fibo 0-28 in constant time
@@ -33,7 +34,6 @@ int main(){
 
 Fibo28::Fibo28(){
 	// init fibo_len & _fibo28;
-	#if DUM == 1
 	fibo_len[0] = 1ull;
 	fibo_len[1] = 1ull;
 	fibo_len[2] = 2ull;
@@ -128,6 +128,14 @@ Fibo28::Fibo28(){
 	fibo_len[91] = 7540113804746346429ull;
 	fibo_len[92] = 12200160415121876738ull;
 
+	#if MEM_LIM == 1
+	std::string tmp[29];
+	tmp[0] = "0"; tmp[1] = "1";
+	for(int i = 2; i < 29; i++){
+		tmp[i] = tmp[i - 1] + tmp[i - 2];
+	}
+	_fibo28 = tmp[28];
+	#else
 
 	_fibo28 = "1011010110110101101011011010110110101101011011010110101101101011011010110101101101011011010110101101\
 1010110101101101011011010110101101101011010110110101101101011010110110101101101011010110110101101011\
