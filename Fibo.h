@@ -1,7 +1,7 @@
 #include<string>
 #include <iostream>
 
-#define DUM 1 //Don't change it
+#define DUM 1 //Don't change this
 #define FIBO_MAIN_DEBUG 0
 #define MEM_LIM 0
 
