@@ -1,11 +1,9 @@
-real    0m0.081s
-user    0m0.074s
-sys     0m0.005s
+string
+real    0m1.793s
+user    0m1.773s
+sys     0m0.012s
 
-real    0m1.943s
-user    0m1.918s
-sys     0m0.013s
-
-real    0m2.005s
-user    0m1.976s
-sys     0m0.015s
+string O3
+real    0m0.074s
+user    0m0.068s
+sys     0m0.006s

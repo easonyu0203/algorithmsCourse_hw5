@@ -1,6 +1,6 @@
 
 #include<string>
-#include<iomanip>
+#include<iomanip>  
 #include<fstream>
 #include<iostream>
 #include"KMP.h" //KMP()  

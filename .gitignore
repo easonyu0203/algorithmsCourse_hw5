@@ -1,1 +1,3 @@
-answer.pages
+*.pages
+*.zip
+performance.txt
