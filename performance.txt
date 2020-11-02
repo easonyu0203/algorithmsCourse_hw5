@@ -1,0 +1,19 @@
+string
+real    0m1.793s
+user    0m1.773s
+sys     0m0.012s
+
+string O3
+real    0m0.074s
+user    0m0.068s
+sys     0m0.006s
+
+string view
+real    0m0.496s
+user    0m0.489s
+sys     0m0.005s
+
+string view O3
+real    0m0.286s
+user    0m0.279s
+sys     0m0.005s
