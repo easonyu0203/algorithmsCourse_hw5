@@ -3,7 +3,7 @@
 #include<iomanip>
 #include<fstream>
 #include<iostream>
-#include"KMP.h" //KMP()
+#include"KMP.h" //KMP()  
 #include"Fibo.h" //class Fibo28
 
 unsigned long long int occur_counter(int n, std::string& p);
@@ -46,7 +46,6 @@ unsigned long long int occur_counter(int n, std::string& p){
 		}
 	}
 
-	// std::cout << "m: " << m << std::endl;
 
 	// edge cases
 	if(p == "0"){
