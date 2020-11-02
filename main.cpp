@@ -5,7 +5,7 @@
 #include<fstream>
 #include<iostream>
 #include"KMP.h" //KMP()
-#include"Fibo.h" //class Fibo28
+#include"Fibo.h" //class Fibo28  
 
 unsigned long long int occur_counter(int n, std::string_view p);
 
