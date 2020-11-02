@@ -5,7 +5,7 @@ run: hw5
 	./hw5
 
 time:
-	time ./hw5 < input > output
+	time ./hw5 input > output
 
 clean:
 	rm hw5 output

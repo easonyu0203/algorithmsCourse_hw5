@@ -10,14 +10,17 @@ unsigned long long int occur_counter(int n, std::string& p);
 
 Fibo28 fibos;
 
-int main(){
+int main(int argc, char* argv[]){
 
 	int caseCnt = 1;
 	//input
 	std::string p;
 	int n;
+	// input file
+	if(argc <= 1){return 1;}
+	std::ifstream infile(argv[1]);
 	
-	while(std::cin >> n >> p){
+	while(infile >> n >> p){
 
 		unsigned long long int count = occur_counter(n, p);
 
